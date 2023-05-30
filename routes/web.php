@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/export',[alkatreszController::class, 'AlkatreszExportToJson']);
 
+Route::get('/alkatresz', [alkatreszController::class, 'index'])->name('alkatresz.index');
+
 Route::get('/', function () {
     return view('welcome');
 });

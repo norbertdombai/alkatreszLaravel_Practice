@@ -13,7 +13,11 @@ class alkatreszController extends Controller
         return response()->json($alkatreszs);
     }
 
-
+    public function index()
+    {
+        $alkatreszs = Alkatresz::all();
+        return view('alkatresz', compact('alkatreszs'));
+    }
  
 
 
